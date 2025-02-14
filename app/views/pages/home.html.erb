@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basecamp - Project Management & Team Communication Software</title>
+    <%= stylesheet_link_tag 'styles', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Kalam&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div data-controller="home">
+        <header class="header">
+            <%= render 'shared/logo' %>
+            
+            <nav class="nav-links" data-home-target="navLinks">
+                <%= render 'shared/navigation' %>
+            </nav>
+            
+            <div class="hamburger-menu" 
+                 data-home-target="hamburger"
+                 data-action="click->home#toggleMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="content-left">
+                <h1>Wrestling with projects?<br>It doesn't have to be this hard.</h1>
+                <p class="questions">Stuff scattered? Falling behind?<br>Even simple things feel like a grind?</p>
+                <p class="tagline">Your projects need Basecamp.</p>
+                <p class="description">Basecamp frees you up. It's for makers, not micromanagers. For shipping, not slipping. It's all about making progress.</p>
+            </div>
+            
+            <div class="content-right">
+                <%= render 'shared/preview_card' %>
+            </div>
+        </main>
+
+        <%= render 'shared/testimonials' %>
+        <%= render 'shared/cta_section' %>
+        <%= render 'shared/bento_grid' %>
+        <%= render 'shared/faq_section' %>
+        <%= render 'shared/footer' %>
+    </div>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</body>
+</html>
