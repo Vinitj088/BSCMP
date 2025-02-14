@@ -63,11 +63,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "ruby_ui", "~> 1.0.0.pre.alpha.4", :group => :development, :require => false
-# Add these if not present
-gem 'pg'
-group :development do
-  # Keep sqlite3 for development if you want
-  gem 'sqlite3'
-end
